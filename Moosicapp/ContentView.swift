@@ -41,7 +41,7 @@ struct ContentView: View {
                     VStack(spacing: 20) {
                         
                         
-                        
+                        // Hope this is not a mess Lol sorry <3
                         
                         SongCardView(song: song)
                             .frame(maxWidth: .infinity)
