@@ -1,8 +1,8 @@
 # Moosicapp
 
-This app provides an intuitive and mood-based music experience. From the main view, you can select one of six mood options. Once you've made your selection, the app uses MusicKit to connect to Apple Music, delivering a randomly chosen song that matches your mood.
+This app provides a music experience. From the main view, you can select one of six mood options. Once you've made your selection, the app uses MusicKit to connect to Apple Music, delivering a randomly chosen song that matches your mood.
 
-For example, if you select "Happy," the app suggests a song that embodies joy and positivity. You can engage with the music by liking a song or sharing it through the dedicated buttons. Sharing generates a link that directs users to Apple Music, making it simple to enjoy or share the song with friends.
+For example, if you select "Happy," the app suggests a song that embodies joy and positivity. You can engage with the music by liking a song or sharing it through the dedicated buttons. Sharing generates a link that directs users to Apple Music.
 
 Your favorite songs are always accessible by tapping the heart icon in the top-right corner of the screen, providing quick access to your personalized collection.
 
