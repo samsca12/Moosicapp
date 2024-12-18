@@ -1,14 +1,12 @@
 # Moosicapp
 
-This app is pretty much simple. 
-Based on your current "mood", select one of the six option displayed on the main view of the app. 
-When you have selected your option, the app connects to Apple Music using MusicKit, and it delivers a random song based on your selected mood.
-If you have chosen "Happy", for example, the app generates songs based on happy moood.
-You can Like the song or share it by tapping their dedicated button. 
-If you share the song a link is generated to direct you to apple music to listen to the song or just send it to your friends. 
-At any time you can visit all your favourites song by cliking the heart icon at the top right of your screen.
+This app provides an intuitive and mood-based music experience. From the main view, you can select one of six mood options. Once you've made your selection, the app uses MusicKit to connect to Apple Music, delivering a randomly chosen song that matches your mood.
 
-The app provides VoiceOver accessibility and of course it connects to your Apple Music using Music Kit proving you a different way to listen to random and hopefully songs that you never knew.
+For example, if you select "Happy," the app suggests a song that embodies joy and positivity. You can engage with the music by liking a song or sharing it through the dedicated buttons. Sharing generates a link that directs users to Apple Music, making it simple to enjoy or share the song with friends.
+
+Your favorite songs are always accessible by tapping the heart icon in the top-right corner of the screen, providing quick access to your personalized collection.
+
+With VoiceOver support, the app ensures an inclusive experience. This application offers a refreshing way to discover mood-based music, helping you explore new tracks in a personalized and engaging manner.
 
 
 Features:
@@ -20,5 +18,8 @@ MusicKit
 
 Screens:
 
-<img width="453" alt="Screen1" src="https://github.com/user-attachments/assets/9b8969bd-0e1a-413c-a1df-51c3a9eafd14" />
-<img width="453" alt="screen 2" src="https://github.com/user-attachments/assets/fb9be81d-6619-4a55-83d0-9786692ae687" />
+<img width="142" alt="screen1" src="https://github.com/user-attachments/assets/db55dd0b-20a5-470b-86c4-6f67434d538e" />
+<img width="142" alt="screen2" src="https://github.com/user-attachments/assets/71ea7b33-0eb4-4b3a-a9f1-27d52c226c0e" />
+<img width="142" alt="screen3" src="https://github.com/user-attachments/assets/04f150ef-6e03-455d-b7b1-58fd95bb31bd" />
+
+
