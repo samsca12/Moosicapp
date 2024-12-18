@@ -17,10 +17,12 @@ struct SongCardView: View {
             if let artwork = song.artwork {
                 AsyncImage(url: artwork.url(width: 300, height: 300)) { image in
                     image.resizable()
+                        .accessibilityLabel("image of the song")
                         .aspectRatio(contentMode: .fit)
                 } placeholder: {
                     ProgressView()
                         .frame(width: 300, height: 300)
+                      
                 }
             }
 
@@ -32,7 +34,7 @@ struct SongCardView: View {
             Text(song.artistName)
                 .font(.subheadline)
                 .foregroundColor(.gray)
-            
+               
             
         }
         

@@ -9,10 +9,17 @@ import SwiftUI
 
 @main
 struct MoosicappApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-            
-        }
-    }
+    @State private var showSplashScreen = true
+
+       var body: some Scene {
+           WindowGroup {               
+               if showSplashScreen {
+                   SplashScreenView {
+                       showSplashScreen = false
+                   }
+               } else {
+                   ContentView()
+               }
+           }
+       }
 }

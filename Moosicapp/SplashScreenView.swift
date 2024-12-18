@@ -8,11 +8,46 @@
 import SwiftUI
 
 struct SplashScreenView: View {
+    @State private var showFirstImage = true
+    var onFinish: () -> Void // Closure to signal completion
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            if showFirstImage {
+                Image("SP1")
+                    .resizable()
+                    .scaledToFit()
+                    .transition(.opacity)
+                    .accessibilityLabel("Image of a person")
+            } else {
+                Image("SP2")
+                    .resizable()
+                    .scaledToFit()
+                    .transition(.opacity)
+                    .accessibilityLabel("Image of a person listening to music")
+            }
+        }
+        .onAppear {
+            // Animate the transition between images
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                withAnimation(.easeInOut(duration: 0.5)) {
+                    showFirstImage = false
+                }
+                // Navigate to ContentView after animation completes
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    onFinish()
+                }
+            }
+        }
     }
 }
 
-#Preview {
-    SplashScreenView()
+struct SplashScreenView_Previews: PreviewProvider {
+    static var previews: some View {
+        SplashScreenView {
+            print("Splash screen finished") // Example action for preview
+        }
+        .previewLayout(.device)
+    }
 }
+

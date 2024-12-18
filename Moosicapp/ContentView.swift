@@ -11,7 +11,11 @@ import SwiftUI
 import MusicKit
 
 
+
+
 struct ContentView: View {
+    
+    @State var isGlowing: Bool = false
     
     @State private var mood: String = "happy" // Default mood
     @State private var currentSong: Song? = nil
@@ -22,13 +26,18 @@ struct ContentView: View {
     @State private var isSongFavorited: Bool = false // Track if the song is favorited
     @State private var musicPlayer = ApplicationMusicPlayer.shared // Music player instance
     
-    @State private var isGlowing = false
+    //    @State private var isGlowing = false
     
     
     
     let moods = ["happy", "sad", "relaxed", "energetic", "romantic", "angry",  ] // Define moods for the picker
     
+    
+    
+    
+    
     var body: some View {
+        
         
         NavigationView {
             VStack {
@@ -49,6 +58,7 @@ struct ContentView: View {
                             .background(Color.black.opacity(0.8))
                             .cornerRadius(15)
                             .shadow(color: .white.opacity(0.3), radius: 10, x: 0, y: 5)
+                        
                         
                         
                         HStack{
@@ -150,7 +160,7 @@ struct ContentView: View {
                                     .cornerRadius(10)
                                     .shadow(color: .white.opacity(0.2), radius: 10, x: 0, y: 5)
                                     .accessibilityLabel("Generate Another Song")
-                              
+                                
                             }
                             Spacer()
                         }
@@ -165,9 +175,12 @@ struct ContentView: View {
                     VStack{
                         
                         HeadphonesGlowView()
+
+                        
                         
                     }
                     
+                  
                     
                     VStack {
                         
@@ -240,8 +253,8 @@ struct ContentView: View {
                         
                     }
                     .padding(.bottom, 150)
-                        
-                  
+                    
+                    
                 }
                 
                 Spacer()
@@ -273,13 +286,13 @@ struct ContentView: View {
                                     .clipShape(Circle())
                                     .shadow(color: .white.opacity(0.3), radius: 5, x: 0, y: 5)
                                     .padding()
-                               
+                                
                             }
                         }
                     }
                 
             }
-          
+            
             .onAppear(perform: requestAuthorization)
             .sheet(isPresented: $isSharing) {
                 if let song = currentSong, let url = song.url {
@@ -288,7 +301,7 @@ struct ContentView: View {
             }
             
         }
-       
+        
     }
     
     
@@ -403,9 +416,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }
+
 
